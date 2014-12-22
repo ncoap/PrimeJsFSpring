@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<ui:composition template="/menu.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui">
+
+    <ui:define name="estilos">
+
+    </ui:define>
+
+    <ui:define name="header">
+
+    </ui:define>
+
+    <ui:define name="bodyJR">
+        <h:form>
+            <p:commandButton value="Listar" actionListener="#{personasBean.listar}" update="data"/>
+            
+            <p:dataTable id="data" value="#{personasBean.personas}" var="persona">
+                <p:column headerText="Codigo">
+                    <p:outputLabel value="#{persona.codigo}"/>
+                </p:column>
+                
+                <p:column headerText="Nombre">
+                    <p:outputLabel value="#{persona.nombre}"/>
+                </p:column>
+            </p:dataTable>
+            
+        </h:form>
+
+    </ui:define>
+
+    <ui:define name="footer">
+
+
+    </ui:define>
+
+    <ui:define name="script">
+
+    </ui:define>
+
+</ui:composition>
+

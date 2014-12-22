@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="first">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>PrimeFaces</title>
+            </f:facet>
+            <ui:insert name="estilos"></ui:insert>
+        </h:head>
+
+        <h:body style="font-size: 12px">
+
+            <p:layout fullPage="true">
+
+                <p:layoutUnit position="north" size="100" resizable="true" closable="true" collapsible="true">
+                    <ui:insert name="header">Aqui cambia el Header . . .</ui:insert>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="south" size="100" closable="true" collapsible="true" >
+                    <ui:insert name="footer">Aqui cambia el Footer . . .</ui:insert>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="west" size="175" header="Left" collapsible="true">
+                    <p:menu>
+                        <p:submenu label="Catalogos">
+                            <p:menuitem value="Alumnos" url="/alumnos/alumno.faces" />
+                            <p:menuitem value="Arrticulos" url="/articulos/articulo.faces" />
+                            <p:menuitem value="Tabla Alumnos" url="/alumnos/tablaAlumnos.faces" />
+                        </p:submenu>
+                        <p:submenu label="Informacion">
+                            <p:menuitem value="Alumnos" url="/alumnos/alumno.faces" />
+                            <p:menuitem value="Arrticulos" url="/articulos/articulo.faces" />
+                            <p:menuitem value="Tabla Alumnos" url="/alumnos/tablaAlumnos.faces" />
+                        </p:submenu>
+                    </p:menu>
+                </p:layoutUnit>
+
+                <p:layoutUnit position="center">
+                    <ui:insert name="bodyJR">Aqui cambia el contenido ...</ui:insert>
+                </p:layoutUnit>
+
+            </p:layout>
+            <ui:insert name="script">
+                
+                
+            </ui:insert>
+        </h:body>
+    </f:view>
+</html>
+
